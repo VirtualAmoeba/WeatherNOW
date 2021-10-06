@@ -1,58 +1,21 @@
 /* /* body {
     background-color: black;
 } */
-.container {
-    display: flex;
-    align-items: left;
-    width: 100%;
-    height: 900px;
-    background-color: #01004e;
-    font-size: 16px;
-    background-color: #ff0000;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image:
-    url('https://cdn.dribbble.com/users/50612/screenshots/2246984/media/2f7c49154731bba4905373f08c249195.gif');
-    width: 60%;
-    height: 400px;
-    color: white;
-    padding: 850px;
+
+div {
+    animation-delay: -2s;
 }
 
-    /* position: fixed;
-    align-items: center;
-    display: flex;
-    top: 100px;
-    left: 560px;
 
-} */
-
-/* .search-btn{
-    width: 30px;
-    height: 20px;
-    position: fixed;
-    align-items: center;
-    display: flex;
-    top: 100px;
-    left: 720px;
-} */
-
-.center-div {
+/* .center-div {
     opacity: 0.6;
-    text-align: center;
-    margin-top: -5%;
-    margin-left: 17%;
-    width: 855px;
-    height: 550px;
     background-color: #FF5733;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 25px;
-    padding: 500px;
     width: 400px;
     height: 200px;
-}
+} */
 
 *
 {
@@ -69,7 +32,28 @@ body
 {
     margin: 0;
     background-color: #ffd8d8;
+    background-color: #ff0000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+    url('file:///Users/corcoding/Downloads/ezgif.com-gif-maker.gif');
 }
+
+/* .container {
+    
+    font-size: 16px;
+    background-color: #ff0000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:
+    url('file:///Users/corcoding/Downloads/ezgif.com-gif-maker.gif');
+    /* width: 60%;
+    height: 6840px; */
+    /* color: white;
+    padding: 850px;
+} */ */
 
 .tb
 {
@@ -93,17 +77,17 @@ input, button
     background-color: transparent;
 }
 
-#cover
+#cover-button
 {
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
-    width: 550px;
+    width: 2050px;
     padding: 35px;
     margin: -83px auto 0 auto;
-    background-color: #DAF7A6 ;
-    border-radius: 20px;
+    background-color: #ff7575;
+    border-radius: 10px;
     box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
     transform: scale(0.6);
 }
@@ -136,7 +120,7 @@ button
 {
     position: relative;
     display: block;
-    width: 104px;
+    width: 84px;
     height: 96px;
     cursor: pointer;
 }
@@ -146,7 +130,7 @@ button
     position: relative;
     top: -8px;
     left: 0;
-    width: 53px;
+    width: 43px;
     height: 43px;
     margin-top: 0;
     border-width: 15px;
@@ -221,36 +205,80 @@ button span:before, button span:after
     background-color: #fff;
 }
 
-#ytd-url {
-    display: block;
+/* #ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Nunito;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ff7575;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(255, 117, 117, 0.86);
+  z-index: 125;
+} */
+
+.modal {
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal-active {
+    transform: translate(-50%, -50%)scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    padding: 10px 14px;
-    margin: 20px;
-    color: #fff;
-    font-family: Nunito;
-    font-size: 14px;
-    text-decoration: none;
-    background-color: #ff7575;
-    border-radius: 4px;
-    box-shadow: 0 10px 20px -5px rgba(255, 117, 117, 0.86);
-    z-index: 125;
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: black;(0, 0, 0, .5);
+    pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
