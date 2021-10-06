@@ -13,36 +13,51 @@
 <body>
     <div class="container">
 
-    <div class="search"> </div>
+    <!-- <div class="center-div"></div> -->
 
-    <div class="center-div"></div>
-
-    <div id="cover">
-
-        <form method="get" action="">
+    <div id="cover-button">
         
-          <div class="tb">
-
-            <div class="td"><input type="text" placeholder="Wat set u claim? PERIODT" required></div>
+        <form method="get" action="">
             
-            <div class="td" id="s-cover">
-              
-                <button type="submit">
-                
-                <div id="s-circle"></div>
-                
-                <span></span>
+            <div class="tb">
 
-                </button>
+                <div class="td">
+                    
+                    <input type="text" placeholder="Search" required>
+                
+                </div>
+
+                <div class="td" id="s-cover">
+
+                    <button type="submit">
+
+                        <div id="s-circle"></div>
+
+                        <span></span>
+                    </button onclick= "somefunct()">
+
+                </div>
 
             </div>
-            
-          </div>
-        </form>
-      </div>
-      
-      <!-- <a href="https://www.youtube.com/channel/UC7hSS_eujjZOEQrjsda76gA/videos" target="_blank" id="ytd-url">My YouTube Channel</a> -->
 
+        </form>
+
+    </div>
+    <button id="modalBtn">Open Modal</button>
+    <div class="modal-active" id="modal">
+        <div class="modal-header">
+            <div class="title">Example Modal</div>
+                <div class="close-button">&times;</div>
+        <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti repudiandae a fugiat, recusandae doloremque ex excepturi eius, magnam dignissimos placeat aut vero rerum consequuntur officiis. Non veritatis possimus cumque!
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script>
+        document.querySelector("#modalBtn").addEventListener("click", ()=>{
+            
+        })
+    </script>
 </body>
 </html>
 
