@@ -6,58 +6,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script4.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <title>Weather Widget</title>
     
 </head>
 <body>
-    <div class="container">
-
-    <!-- <div class="center-div"></div> -->
-
+  <section>
     <div id="cover-button">
         
-        <form method="get" action="">
-            
-            <div class="tb">
+      <form method="get" action="">
+          
+          <div class="tb">
 
-                <div class="td">
-                    
-                    <input type="text" placeholder="Search" required>
-                
-                </div>
+              <div class="td">
 
-                <div class="td" id="s-cover">
+                  <input type="text" placeholder="Search" required id="cityName">
+              
+              </div>
 
-                    <button type="submit">
+              <div class="td" id="s-cover">
 
-                        <div id="s-circle"></div>
+                  <button id="button" type="submit">
 
-                        <span></span>
-                    </button onclick= "somefunct()">
+                      <div id="s-circle"></div>
 
-                </div>
+                      <span></span>
+                  </button>
 
-            </div>
+              </div>
 
-        </form>
+          </div>
 
-    </div>
-    <button id="modalBtn">Open Modal</button>
-    <div class="modal-active" id="modal">
-        <div class="modal-header">
-            <div class="title">Example Modal</div>
-                <div class="close-button">&times;</div>
-        <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam deleniti repudiandae a fugiat, recusandae doloremque ex excepturi eius, magnam dignissimos placeat aut vero rerum consequuntur officiis. Non veritatis possimus cumque!
+      </form>
+
+  </div>
+  </section>
+
+  <section>
+    <div class="rt-container" style="text-align:center;">
+
+      <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <span id = "tempo" class="temp">Temperature</span>
         </div>
+        <div class="back" id="temp"></div>
+      </div>
     </div>
-    <div id="overlay"></div>
-    <script>
-        document.querySelector("#modalBtn").addEventListener("click", ()=>{
-            
-        })
-    </script>
+    
+    <div class="card-container" >
+      <div class="card">
+        <div class="front">
+          <span class="precip"> Precipitation
+            <!-- <img class="precipImg" src="https://w7.pngwing.com/pngs/606/544/png-transparent-rain-computer-icons-weather-symbol-cloud-rain-text-cloud-weather-forecasting.png"></img> -->
+          </span>
+        </div>
+        <div class="back" id="humidity"></div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <span class="wind">Wind</span>
+        </div>
+        <div id="wind" class="back"></div>
+      </div>
+    </div>
+
+</div>
+</section>
+<!-- <script src="script4.js"></script>         -->
 </body>
 </html>
 
